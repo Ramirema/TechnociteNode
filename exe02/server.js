@@ -37,7 +37,7 @@ fs.readFile(`${process.cwd()}/liste.txt`, {encoding:'utf8'},(err, data)=>{
 
 const [action, value] = [process.argv[2], process.argv[3]]
 const possibleActions = ['add', 'remove']
-const fileMsg = require('./tpk/fileManager')
+const fileMger = require('./method/fileManager')
 const checkActions = (action)=>{
     // let tempArr = possibleActions.filter(item) => {
     //     item === action
@@ -61,41 +61,8 @@ const init = () => {
                                         - remove`)
     }else if (!checkValue(value)){
         console.log(`Error : You need to give value for insertion`)
+    }else{
+        fileMger.init('liste.txt',action,value)
     }
 }
 init()
-
-function readFile(url, cb){
-    fs.readFile(url,{encoding: 'utf8'},(err,data)=>{
-        if(err) throw err
-        cb(err,data)
-    })
-}
-
-function showMsg(err,data){
-    console.log
-}
-
-const fs = require('fs')
-let values = []
-module.exports ={
-    init :(file,action,value)=>{
-        fs.readFile(file,(err,data)=>{
-            values = data.toString().split('\n')
-        })
-    }
-}
-
-
-const add = (value,file)=>{
-    values.push(value)
-    save(file)
-}
-const remove = (value,file)=>{
-    //
-}
-const save = (file)=>{
-    let tempStr = values.reduce((prev,current)=>{
-
-    })
-}
