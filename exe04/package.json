@@ -1,19 +1,16 @@
 {
   "name": "exe04",
   "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "description": "my first web server for my students",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Ramirema/TechnociteNode.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Ramirema/TechnociteNode/issues"
-  },
-  "homepage": "https://github.com/Ramirema/TechnociteNode#readme"
+  "keywords": [
+    "nodejs",
+    "server",
+    "http"
+  ],
+  "author": "TCDP",
+  "license": "MIT"
 }
