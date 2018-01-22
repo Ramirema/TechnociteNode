@@ -20,12 +20,6 @@
         <input type="submit" value="sauvegarder">
     </form>
     <script>
-        // document.getElementById('book-form').addEventListener('submit', function(e){
-        //     e.preventDefault();
-        //     let form = new FormData(document.getElementById('book-form'))
-        //     let object = {}
-        // })
-
         document.getElementById('book-form').addEventListener('submit', function(e){
             e.preventDefault();
             let form = new FormData(document.getElementById('book-form'))
@@ -52,7 +46,7 @@
                 console.log(e)
             })
         })
-        
+
         fetch('/api/books',)
             .then(response =>{
             response.json().then(data =>{
